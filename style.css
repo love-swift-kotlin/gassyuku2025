@@ -6,7 +6,7 @@
 
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", sans-serif;
-    background: #f5f5f5;
+    background: linear-gradient(180deg, #87CEEB 0%, #E0F6FF 50%, #F0F8FF 100%);
     min-height: 100vh;
     padding: 20px;
     line-height: 1.6;
@@ -42,13 +42,13 @@ header {
 header h1 {
     font-size: 2.5em;
     margin: 30px 0 10px;
-    color: #667eea;
+    color: #0080C0;
 }
 
 .subtitle {
     font-size: 1.1em;
-    opacity: 0.8;
-    color: #764ba2;
+    opacity: 0.9;
+    color: #00A0C8;
     margin-bottom: 30px;
 }
 
@@ -106,15 +106,15 @@ section:last-of-type {
 }
 
 h2 {
-    color: #667eea;
+    color: #0080C0;
     font-size: 1.8em;
     margin-bottom: 20px;
     padding-bottom: 10px;
-    border-bottom: 3px solid #667eea;
+    border-bottom: 3px solid #0080C0;
 }
 
 h3 {
-    color: #764ba2;
+    color: #00A0C8;
     font-size: 1.3em;
     margin-bottom: 15px;
 }
@@ -126,15 +126,16 @@ h3 {
 }
 
 .info-item {
-    background: #f8f9fa;
+    background: rgba(255, 255, 255, 0.9);
     padding: 15px;
     border-radius: 10px;
-    border-left: 4px solid #667eea;
+    border-left: 4px solid #0080C0;
+    box-shadow: 0 2px 8px rgba(0, 128, 192, 0.1);
 }
 
 .label {
     font-weight: bold;
-    color: #667eea;
+    color: #0080C0;
     display: block;
     margin-bottom: 5px;
 }
@@ -145,10 +146,11 @@ h3 {
 }
 
 .day-card {
-    background: #f8f9fa;
+    background: rgba(255, 255, 255, 0.8);
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
+    box-shadow: 0 2px 12px rgba(0, 128, 192, 0.15);
 }
 
 .day-card:last-child {
@@ -163,20 +165,21 @@ h3 {
     display: flex;
     padding: 12px;
     margin-bottom: 8px;
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 8px;
-    border-left: 4px solid #764ba2;
+    border-left: 4px solid #00A0C8;
     transition: transform 0.2s;
+    box-shadow: 0 1px 4px rgba(0, 160, 200, 0.1);
 }
 
 .timeline-item:hover {
     transform: translateX(5px);
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 160, 200, 0.2);
 }
 
 .time {
     font-weight: bold;
-    color: #764ba2;
+    color: #00A0C8;
     min-width: 60px;
     margin-right: 15px;
 }
@@ -238,10 +241,10 @@ h3 {
 }
 
 footer {
-    background: #f8f9fa;
+    background: rgba(255, 255, 255, 0.7);
     padding: 20px;
     text-align: center;
-    color: #667eea;
+    color: #0080C0;
     font-size: 1.1em;
     font-weight: bold;
 }
@@ -268,7 +271,7 @@ footer {
 }
 
 .notes-content a {
-    color: #667eea;
+    color: #0080C0;
     text-decoration: none;
     word-break: break-all;
 }
@@ -279,15 +282,16 @@ footer {
 
 .event-link {
     padding: 30px;
-    background: #f8f9fa;
+    background: rgba(255, 255, 255, 0.6);
 }
 
 .link-card {
-    background: white;
+    background: rgba(255, 255, 255, 0.9);
     padding: 25px;
     border-radius: 10px;
     text-align: center;
-    border: 2px solid #667eea;
+    border: 2px solid #0080C0;
+    box-shadow: 0 2px 12px rgba(0, 128, 192, 0.15);
 }
 
 .link-card p {
@@ -298,16 +302,18 @@ footer {
 .connpass-link {
     display: inline-block;
     padding: 15px 30px;
-    background: #667eea;
+    background: #0080C0;
     color: white;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
-    transition: background 0.3s;
+    transition: all 0.3s;
 }
 
 .connpass-link:hover {
-    background: #764ba2;
+    background: #00A0C8;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 160, 200, 0.3);
 }
 
 @media (max-width: 768px) {
