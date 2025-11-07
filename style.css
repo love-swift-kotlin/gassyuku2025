@@ -52,6 +52,50 @@ header h1 {
     margin-bottom: 30px;
 }
 
+.discord-notice {
+    padding: 30px;
+    background: #5865f2;
+    color: white;
+    border-bottom: none;
+}
+
+.discord-notice h2 {
+    color: white;
+    border-bottom: 3px solid white;
+}
+
+.discord-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.discord-card p {
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.discord-note {
+    font-size: 0.9em !important;
+    opacity: 0.9;
+    margin-top: 10px !important;
+}
+
+.discord-link {
+    display: inline-block;
+    padding: 15px 30px;
+    background: white;
+    color: #5865f2;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: transform 0.2s;
+    margin: 10px 0;
+}
+
+.discord-link:hover {
+    transform: scale(1.05);
+}
+
 section {
     padding: 30px;
     border-bottom: 1px solid #e0e0e0;
