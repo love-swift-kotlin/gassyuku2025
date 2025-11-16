@@ -42,10 +42,6 @@
                     <span class="label">宿泊:</span>
                     <span class="value">デイゴホテル</span>
                 </div>
-                <div class="info-item">
-                    <span class="label">参加費:</span>
-                    <span class="value">11,000円（仮）</span>
-                </div>
             </div>
         </section>
 
@@ -100,8 +96,15 @@
                         </div>
                     </div>
                     <div class="timeline-item">
+                        <span class="time">19:00</span>
+                        <span class="activity">夕食までの自由時間</span>
+                    </div>
+                    <div class="timeline-item">
                         <span class="time">20:00</span>
-                        <span class="activity">会場クローズ、夕食</span>
+                        <div class="activity-content">
+                            <span class="activity">会場クローズ、Lagoon KOZA集合、夕食へ</span>
+                            <span class="activity">※店ごとの会計でその場の人たちで割り勘</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -110,19 +113,37 @@
                 <h3>2日目（11月23日）</h3>
                 <div class="timeline">
                     <div class="timeline-item">
+                        <span class="time">朝</span>
+                        <div class="activity-content">
+                            <span class="activity">朝食</span>
+                            <span class="activity">ホテルの朝食があります。会計の方法は運営メンバーに確認してください</span>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
                         <span class="time">10:00</span>
                         <span class="activity">開場</span>
                     </div>
                     <div class="timeline-item">
+                        <span class="time">〜14:00</span>
+                        <span class="activity">ランチは自由（14:00までのどこかで各自）</span>
+                    </div>
+                    <div class="timeline-item">
                         <span class="time">14:00</span>
-                        <span class="activity">成果発表</span>
+                        <div class="activity-content">
+                            <span class="activity">成果発表</span>
+                            <span class="activity">※基本全員発表</span>
+                        </div>
                     </div>
                     <div class="timeline-item">
                         <span class="time">15:00</span>
-                        <span class="activity">解散</span>
+                        <div class="activity-content">
+                            <span class="activity">解散</span>
+                            <span class="activity">ホテルから那覇空港までのバスを出せる可能性あり（確認中）</span>
+                            <a href="https://maps.app.goo.gl/baLg8T9XwW7ddVZA7" target="_blank" class="timeline-reference">参考：Lagoon KOZAから那覇空港への経路（Google Maps）</a>
+                        </div>
                     </div>
                 </div>
-                <p class="schedule-note">※解散後の交通手段に関しては人数確定後に調整します</p>
+                <p class="schedule-note">※解散後の交通手段に関しては各々にお任せとなります</p>
             </div>
         </section>
 
@@ -174,5 +195,48 @@
             <p>素敵な開発合宿になりますように！</p>
         </footer>
     </div>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-image" class="lightbox-content" alt="">
+    </div>
+
+    <script>
+        // Lightbox functionality
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImage = document.getElementById('lightbox-image');
+        const closeBtn = document.querySelector('.lightbox-close');
+
+        // Add click event to all timeline images
+        document.querySelectorAll('.timeline-image').forEach(img => {
+            img.addEventListener('click', function() {
+                lightbox.style.display = 'flex';
+                lightboxImage.src = this.src;
+                lightboxImage.alt = this.alt;
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        // Close lightbox
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+
+        closeBtn.addEventListener('click', closeLightbox);
+        lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
+            }
+        });
+    </script>
 </body>
 </html>
